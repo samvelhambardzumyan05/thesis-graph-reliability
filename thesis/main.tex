@@ -4,11 +4,11 @@
 \usepackage{polyglossia}
 \setmainfont{DejaVu Serif} % supports Armenian; change if your faculty requires another font
 \newfontfamily\armenianfont{DejaVu Serif}
-\setmainlanguage{armenian}
+\setmainlanguage[numerals=arabic]{armenian}
 \setotherlanguage{english}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{microtype}
 \emergencystretch=4em
@@ -29,9 +29,9 @@
 \end{center}
 
 \tableofcontents
+\clearpage
 
-\chapter*{Ներածություն}
-% Արդիականություն, նպատակ, խնդիրներ
+\input{intro}
 
 \input{chapter1}
 
@@ -46,6 +46,7 @@
 \section{Փորձեր և արդյունքների համեմատություն}
 
 \chapter*{Եզրակացություն}
+\addcontentsline{toc}{chapter}{Եզրակացություն}
 
 \begin{thebibliography}{9}
 \bibitem{west} D.~B.~West, \emph{Introduction to Graph Theory}, Prentice Hall, 2001.
