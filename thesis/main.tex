@@ -1,14 +1,19 @@
 % Compile with XeLaTeX (Overleaf: Menu -> Compiler -> XeLaTeX)
-\documentclass[14pt,a4paper]{extreport}
+\documentclass[12pt,a4paper]{extreport}
 \usepackage{fontspec}
 \usepackage{polyglossia}
+\setmainfont{DejaVu Serif} % supports Armenian; change if your faculty requires another font
+\newfontfamily\armenianfont{DejaVu Serif}
 \setmainlanguage{armenian}
 \setotherlanguage{english}
-\setmainfont{DejaVu Serif} % supports Armenian; change if your faculty requires another font
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[margin=2.5cm]{geometry}
+\usepackage{microtype}
+\emergencystretch=4em
+\sloppy
+\renewcommand{\baselinestretch}{1.25}
 
 \newtheorem{theorem}{Թեորեմ}
 \newtheorem{definition}{Սահմանում}
@@ -28,11 +33,7 @@
 \chapter*{Ներածություն}
 % Արդիականություն, նպատակ, խնդիրներ
 
-\chapter{Տեսական հիմքեր}
-\section{Գրաֆների հիմնական հասկացություններ}
-\section{Կապակցվածություն, կտրող կետեր, կամուրջներ}
-\section{$k$-կապակցվածություն և Մենգերի թեորեմը}
-\section{Ցանցի հուսալիության մոդելներ}
+\input{chapter1}
 
 \chapter{Մեթոդներ}
 \section{Կապակցվածության ալգորիթմներ (BFS/DFS, բաղադրիչներ)}
@@ -49,6 +50,7 @@
 \begin{thebibliography}{9}
 \bibitem{west} D.~B.~West, \emph{Introduction to Graph Theory}, Prentice Hall, 2001.
 \bibitem{colbourn} C.~J.~Colbourn, \emph{The Combinatorics of Network Reliability}, Oxford University Press, 1987.
+\bibitem{valiant} L.~G.~Valiant, The complexity of enumeration and reliability problems, \emph{SIAM J. Computing}, 8(3), 1979, 410--421.
 \end{thebibliography}
 
 \end{document}
