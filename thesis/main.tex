@@ -1,0 +1,54 @@
+% Compile with XeLaTeX (Overleaf: Menu -> Compiler -> XeLaTeX)
+\documentclass[14pt,a4paper]{extreport}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{armenian}
+\setotherlanguage{english}
+\setmainfont{DejaVu Serif} % supports Armenian; change if your faculty requires another font
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+
+\newtheorem{theorem}{Թեորեմ}
+\newtheorem{definition}{Սահմանում}
+\newtheorem{example}{Օրինակ}
+
+\begin{document}
+
+\begin{center}
+{\large Դիպլոմային աշխատանք}\\[1cm]
+{\Large\bfseries Գրաֆների կապակցվածության և ցանցի հուսալիության\\վերլուծության մեթոդների ուսումնասիրություն}\\[1cm]
+Կատարող՝ Ս.~Համբարձումյան\\
+Ղեկավար՝ Ն.~Բադալյան
+\end{center}
+
+\tableofcontents
+
+\chapter*{Ներածություն}
+% Արդիականություն, նպատակ, խնդիրներ
+
+\chapter{Տեսական հիմքեր}
+\section{Գրաֆների հիմնական հասկացություններ}
+\section{Կապակցվածություն, կտրող կետեր, կամուրջներ}
+\section{$k$-կապակցվածություն և Մենգերի թեորեմը}
+\section{Ցանցի հուսալիության մոդելներ}
+
+\chapter{Մեթոդներ}
+\section{Կապակցվածության ալգորիթմներ (BFS/DFS, բաղադրիչներ)}
+\section{Մինիմալ կտրվածք}
+\section{Հուսալիության հաշվարկ. ճշգրիտ մեթոդներ}
+\section{Monte Carlo սիմուլյացիա}
+
+\chapter{Գործնական մաս}
+\section{Իրականացում}
+\section{Փորձեր և արդյունքների համեմատություն}
+
+\chapter*{Եզրակացություն}
+
+\begin{thebibliography}{9}
+\bibitem{west} D.~B.~West, \emph{Introduction to Graph Theory}, Prentice Hall, 2001.
+\bibitem{colbourn} C.~J.~Colbourn, \emph{The Combinatorics of Network Reliability}, Oxford University Press, 1987.
+\end{thebibliography}
+
+\end{document}
