@@ -25,6 +25,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{array}
 \usepackage{graphicx}
+\usepackage{tikz}
 \usepackage[hidelinks]{hyperref}
 % ---- Էջի ձևաչափ (ըստ նմուշի). A4, ձախ 3 սմ, աջ 1 սմ, վերև 2 սմ, ներքև 2,5 սմ ----
 \usepackage[a4paper,left=3cm,right=1cm,top=2cm,bottom=2.5cm]{geometry}
@@ -35,7 +36,7 @@
 \usepackage{titlesec}
 \emergencystretch=4em
 \sloppy
-\onehalfspacing                 % 1,5 ինտերվալ
+\setstretch{1.5}                % 1,5 ինտերվալ
 \setlength{\parindent}{1.25cm}  % պարբերության ներքաշում
 \setlength{\parskip}{0pt}
 
@@ -51,6 +52,7 @@
 \titleformat{\subsection}{\bfseries\fontsize{12}{16}\selectfont}{\thesubsection.}{0.5em}{}
 \addto\captionsarmenian{\renewcommand{\bibname}{Գրականության ցանկ}}
 
+\theoremstyle{definition}
 \newtheorem{theorem}{Թեորեմ}
 \newtheorem{definition}{Սահմանում}
 \newtheorem{example}{Օրինակ}
@@ -81,24 +83,14 @@
 
 \input{chapter2}
 
-\input{chapter3}
-
-\chapter*{Եզրակացություն}
-\addcontentsline{toc}{chapter}{Եզրակացություն}
-
-% Սևագիր v1: կճշգրտվի Գլուխ 1-3-ը վերջնականապես հաստատելուց հետո
-Աշխատանքում ուսումնասիրվել են գրաֆների կապակցվածության և ցանցի հուսալիության վերլուծության հիմնական մեթոդները: Ներկայացվել են կապակցվածության հասկացությունները (կամուրջներ, կտրող կետեր, $k$-կապակցվածություն, Մենգերի թեորեմ), կապակցվածության որոշման և չափման ալգորիթմները (BFS/DFS, Տարյանի ալգորիթմ, առավելագույն հոսք), հուսալիության ճշգրիտ (թվարկում, գործոնավորում) և մոտավոր (Monte Carlo) մեթոդները, ինչպես նաև կտրվածքային գնահատականները: Բոլոր ալգորիթմները իրականացված են Python լեզվով, ստուգված են \texttt{NetworkX}-ի հետ համեմատությամբ և փորձարկված են 5 մոդելային գրաֆների վրա: Փորձերը ցույց են տվել, որ ճշգրիտ մեթոդները կիրառելի են մինչև մոտ 25 կող ունեցող գրաֆների համար, Monte Carlo-ն թույլ է տալիս գնահատել ավելի մեծ գրաֆներ $1/\sqrt N$ ճշտությամբ, իսկ հուսալիությունը կախված է ոչ միայն $\lambda$-ից, այլև փոքր կտրվածքների քանակից.
+% Գլուխ 3-ը և եզրակացությունը ավելացվելու են հաջորդ փուլերում
 
 \clearpage
 \addcontentsline{toc}{chapter}{Գրականության ցանկ}
+\nocite{*}
 \begin{thebibliography}{9}
-\bibitem{west} D.~B.~West, \emph{Introduction to Graph Theory}, Prentice Hall, 2001.
-\bibitem{colbourn} C.~J.~Colbourn, \emph{The Combinatorics of Network Reliability}, Oxford University Press, 1987.
-\bibitem{valiant} L.~G.~Valiant, The complexity of enumeration and reliability problems, \emph{SIAM J. Computing}, 8(3), 1979, 410--421.
-\bibitem{tarjan} R.~E.~Tarjan, Depth-first search and linear graph algorithms, \emph{SIAM J. Computing}, 1(2), 1972, 146--160.
-\bibitem{edmondskarp} J.~Edmonds, R.~M.~Karp, Theoretical improvements in algorithmic efficiency for network flow problems, \emph{J. ACM}, 19(2), 1972, 248--264.
-\bibitem{provanball} J.~S.~Provan, M.~O.~Ball, The complexity of counting cuts and of computing the probability that a graph is connected, \emph{SIAM J. Computing}, 12(4), 1983, 777--788.
-\bibitem{metropolis} N.~Metropolis, S.~Ulam, The Monte Carlo method, \emph{J. Amer. Statist. Assoc.}, 44(247), 1949, 335--341.
+\bibitem{west} D.~B.~West, Introduction to Graph Theory, Prentice Hall, 2001.
+\bibitem{tarjan} R.~E.~Tarjan, Depth-first search and linear graph algorithms, SIAM J. Computing, 1(2), 1972, 146--160.
 \end{thebibliography}
 
 \end{document}
